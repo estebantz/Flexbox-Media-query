@@ -1,0 +1,111 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    text-align: center;
+    margin: 30px;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+/* contenedor padre */
+.padre{
+    /* border: 1px solid blue; */
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.columna{
+    /* background-color: coral; */
+    width: 24%;
+}
+
+img{
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    position: relative;
+}
+
+img:hover{
+    top: -5px;
+    right: 5px;
+    box-shadow: 5px 6px 7px 0px blue;
+}
+
+.zorrito{
+    transition: all .10s ease-in-out;
+}
+
+.zorrito:hover{
+    filter: grayscale(80%);
+}
+
+.desenfoque img:hover{
+    filter: blur(5px);
+    transition: .10s;
+}
+
+.sepia img:hover{
+    filter: sepia(60%);
+    transition: .9s;
+}
+
+.opacidad img:hover{
+    filter: opacity(60%);
+}
+
+.saturado:hover{
+    filter: saturate(125%);
+}
+
+/* media queries */
+
+/* @media tipo-de-medio and (condicion) */
+
+/* dispositivos grandes */
+@media all and (min-width: 992px) {
+    body{
+        background-color: burlywood;
+    }
+    header{
+        color: cyan;
+        text-align: left;
+    }
+}
+
+/* dispositivos medianos */
+
+@media all and (min-width: 768px) and (max-width:992px){
+    .columna{
+        width: 30%;
+    }
+}
+
+/* dispositivos moviles grandes */
+
+@media all and (min-width: 600px) and (max-width: 767px){
+    .columna{
+        width: 45%;
+    }
+}
+
+/* dispositivos chiquitos */
+
+@media all and (max-width: 600px){
+    .columna{
+        width: 100%;
+    }
+    body{
+        background-color: burlywood;
+    }
+}
